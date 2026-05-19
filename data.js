@@ -932,6 +932,51 @@ mezcalCards.push(
   }
 );
 
+const mezcalVideos = [
+  {
+    id: "yt-sola-vega-3000-noches",
+    title: "Asi se elabora el Mezcal Ancestral 3000 Noches, en Villa Sola de Vega, Oaxaca",
+    channel: "YouTube",
+    region: "Oaxaca",
+    stage: "Proceso general",
+    topic: "Proceso",
+    url: "https://www.youtube.com/watch?v=x5yAuf6EhX0",
+    embedUrl: "https://www.youtube-nocookie.com/embed/x5yAuf6EhX0",
+    rightsStatus: "Enlace revisable",
+    use: "No descargar; enlazar y resumir con atribucion",
+    note:
+      "Candidato audiovisual sobre proceso ancestral y tradicion familiar en Villa Sola de Vega. Revisar canal original, permiso de insercion y descripcion antes de incrustar."
+  },
+  {
+    id: "yt-masterclass-proceso-oaxaca",
+    title: "MasterClass de Mezcal - Procesos del mezcal Oaxaqueno",
+    channel: "YouTube",
+    region: "Oaxaca",
+    stage: "Proceso general",
+    topic: "Formacion",
+    url: "https://www.youtube.com/watch?v=vPuC5Zr9I1k",
+    embedUrl: "https://www.youtube-nocookie.com/embed/vPuC5Zr9I1k",
+    rightsStatus: "Enlace revisable",
+    use: "No descargar; enlazar y resumir con atribucion",
+    note:
+      "Candidato audiovisual formativo sobre procesos del mezcal. Revisar si el video permite insercion y si la fuente es adecuada para el archivo."
+  },
+  {
+    id: "video-maguey-exchange",
+    title: "Maguey Exchange Video Library",
+    channel: "Maguey Exchange",
+    region: "Oaxaca",
+    stage: "Historia familiar",
+    topic: "Voces",
+    url: "https://www.magueyexchange.com/videos",
+    embedUrl: "",
+    rightsStatus: "Enlace seguro",
+    use: "Enlazar a biblioteca original; no republicar videos",
+    note:
+      "Biblioteca audiovisual ya incluida como fuente. Usar como punto de partida para fichas de voces, procesos y productores con enlace al sitio original."
+  }
+];
+
 mezcalCards.push(
   {
     title: "Fermentacion como decision situada",

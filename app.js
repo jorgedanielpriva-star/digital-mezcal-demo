@@ -13,6 +13,8 @@ const pendingList = document.querySelector("#pendingList");
 const pendingCount = document.querySelector("#pendingCount");
 const actorMap = document.querySelector("#actorMap");
 const actorCount = document.querySelector("#actorCount");
+const videoList = document.querySelector("#videoList");
+const videoCount = document.querySelector("#videoCount");
 
 const pendingStatuses = ["Por contrastar", "Por revisar", "Buscar PDF original"];
 const actorTypes = [
@@ -212,6 +214,40 @@ function renderActorMap() {
   });
 }
 
+function renderVideos() {
+  const videos = typeof mezcalVideos === "undefined" ? [] : mezcalVideos;
+  videoCount.textContent = `${videos.length} video${videos.length === 1 ? "" : "s"}`;
+  videoList.innerHTML = "";
+
+  videos.forEach((video) => {
+    const article = document.createElement("article");
+    article.className = "video-card";
+    const canEmbed = video.rightsStatus === "Embebible revisado" && video.embedUrl;
+    article.innerHTML = `
+      ${canEmbed ? `<iframe src="${video.embedUrl}" title="${video.title}" loading="lazy" allowfullscreen></iframe>` : ""}
+      <div class="video-card-body">
+        <div class="card-header">
+          <h3>${video.title}</h3>
+          <span class="badge">${video.rightsStatus}</span>
+        </div>
+        <p class="summary">${video.note}</p>
+        <div class="meta">
+          <span>${video.region}</span>
+          <span>${video.stage}</span>
+          <span>${video.topic}</span>
+          <span>${video.channel}</span>
+        </div>
+        <div class="source-note"><strong>Uso:</strong> ${video.use}</div>
+        <div class="card-footer">
+          <span class="confidence">Revision de derechos requerida</span>
+          <a href="${video.url}" target="_blank" rel="noreferrer">Abrir video</a>
+        </div>
+      </div>
+    `;
+    videoList.appendChild(article);
+  });
+}
+
 fillSelect(stageFilter, uniqueValues("stage"));
 fillSelect(regionFilter, uniqueValues("region"));
 fillSelect(typeFilter, uniqueValues("sourceType"));
@@ -228,3 +264,4 @@ renderCards();
 renderSources();
 renderPending();
 renderActorMap();
+renderVideos();

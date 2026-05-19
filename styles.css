@@ -105,6 +105,7 @@ main {
 .sources-section,
 .research-grid,
 .about-section,
+.video-section,
 .content-grid {
   max-width: 1280px;
   margin: 0 auto 28px;
@@ -373,6 +374,67 @@ a:hover {
   line-height: 1.5;
 }
 
+.video-section {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.section-toolbar p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.video-policy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.video-policy article {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--clay);
+  background: var(--surface);
+  padding: 14px;
+}
+
+.video-policy h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.video-policy p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.video-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.video-card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.video-card-body {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
 .research-grid {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
@@ -503,6 +565,8 @@ footer {
   .cards,
   .research-grid,
   .principles,
+  .video-policy,
+  .video-list,
   .sources-list {
     grid-template-columns: 1fr;
   }
