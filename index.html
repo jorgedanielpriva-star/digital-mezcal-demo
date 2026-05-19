@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archivo Digital del Mezcal</title>
+    <meta
+      name="description"
+      content="Archivo curado de fuentes publicas sobre mezcal, productores, asociaciones, tesis, procesos, sostenibilidad y regiones mezcaleras de Mexico."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-copy">
+        <p class="eyebrow">Prototipo de investigacion de escritorio</p>
+        <h1>Archivo Digital del Mezcal</h1>
+        <p>
+          Biblioteca curada de conocimiento publico sobre mezcal: procesos,
+          agaves, regiones, sostenibilidad y voces documentadas en fuentes abiertas.
+        </p>
+      </div>
+      <div class="header-panel" aria-label="Resumen del archivo">
+        <span class="metric"><strong id="sourceCount">0</strong> fuentes</span>
+        <span class="metric"><strong id="cardCount">0</strong> fichas</span>
+        <span class="metric"><strong>Demo</strong> lista</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="filters-section" aria-labelledby="filtersTitle">
+        <div>
+          <h2 id="filtersTitle">Explorar saberes publicados</h2>
+          <p>Filtra por etapa, region, tipo de fuente o tema sin perder el enlace original.</p>
+        </div>
+        <div class="filters">
+          <label>
+            Buscar
+            <input id="searchInput" type="search" placeholder="fermentacion, tobala, Oaxaca...">
+          </label>
+          <label>
+            Etapa
+            <select id="stageFilter">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+          <label>
+            Region
+            <select id="regionFilter">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+          <label>
+            Fuente
+            <select id="typeFilter">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+          <label>
+            Tema
+            <select id="topicFilter">
+              <option value="all">Todos</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <aside class="method-panel" aria-labelledby="methodTitle">
+          <h2 id="methodTitle">Metodo de trabajo</h2>
+          <ol>
+            <li>Localizar fuentes publicas verificables.</li>
+            <li>Extraer ideas en fichas, no copiar obras completas.</li>
+            <li>Clasificar por proceso, agave, region y tema.</li>
+            <li>Marcar limites: fuente, fecha, confiabilidad y derechos.</li>
+            <li>Actualizar con validacion comunitaria cuando sea posible.</li>
+          </ol>
+          <div class="notice">
+            <h3>Regla etica</h3>
+            <p>
+              Este archivo no sustituye el trabajo de campo ni habla por las comunidades.
+              Resume conocimiento publicado y enlaza a sus fuentes.
+            </p>
+          </div>
+          <div class="notice notice-soft">
+            <h3>Uso permitido</h3>
+            <p>
+              Usar resumen, metadatos y enlace. No copiar entrevistas, videos,
+              fotografias ni articulos completos sin permiso.
+            </p>
+          </div>
+        </aside>
+
+        <section class="cards-region" aria-live="polite">
+          <div class="section-toolbar">
+            <h2>Fichas de conocimiento</h2>
+            <span id="resultCount">0 resultados</span>
+          </div>
+          <div id="cards" class="cards"></div>
+        </section>
+      </section>
+
+      <section class="research-grid" aria-label="Herramientas de investigacion">
+        <section class="research-panel" aria-labelledby="pendingTitle">
+          <div class="section-toolbar">
+            <h2 id="pendingTitle">Pendientes de verificacion</h2>
+            <span id="pendingCount">0 pendientes</span>
+          </div>
+          <div id="pendingList" class="pending-list"></div>
+        </section>
+
+        <section class="research-panel" aria-labelledby="actorsTitle">
+          <div class="section-toolbar">
+            <h2 id="actorsTitle">Mapa nacional de actores</h2>
+            <span id="actorCount">0 actores</span>
+          </div>
+          <div id="actorMap" class="actor-map"></div>
+        </section>
+      </section>
+
+      <section class="about-section" aria-labelledby="aboutTitle">
+        <div class="about-copy">
+          <p class="eyebrow dark">Publicacion responsable</p>
+          <h2 id="aboutTitle">Acerca del archivo</h2>
+          <p>
+            Este proyecto es una herramienta de investigacion de escritorio sobre el mezcal en Mexico.
+            Reune fuentes publicas, tesis, asociaciones, documentos tecnicos y materiales institucionales
+            para construir fichas breves, trazables y revisables.
+          </p>
+        </div>
+        <div class="principles">
+          <article>
+            <h3>Que es</h3>
+            <p>Una biblioteca curada de conocimiento publicado, organizada por fuente, region, tema, etapa del proceso y estado de revision.</p>
+          </article>
+          <article>
+            <h3>Que no es</h3>
+            <p>No sustituye trabajo de campo, no representa oficialmente a comunidades y no convierte testimonios ajenos en propiedad del proyecto.</p>
+          </article>
+          <article>
+            <h3>Como usarlo</h3>
+            <p>Usa las fichas como punto de partida, abre la fuente original y revisa confiabilidad, contexto, fecha y derechos antes de citar.</p>
+          </article>
+          <article>
+            <h3>Aviso etico</h3>
+            <p>Los saberes del mezcal tienen duenios, territorios e historia. Para uso comercial, promocional o investigacion formal se requiere consentimiento directo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sources-section" aria-labelledby="sourcesTitle">
+        <div class="section-toolbar">
+          <h2 id="sourcesTitle">Fuentes iniciales</h2>
+          <span>Base semilla para ampliar</span>
+        </div>
+        <div id="sourcesList" class="sources-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Archivo en version prototipo. Publica resumenes y enlaces, no materiales completos.
+        Revisa pendientes antes de usar la informacion en investigacion, docencia o comunicacion.
+      </p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
